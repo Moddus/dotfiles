@@ -1,3 +1,13 @@
+source $HOME/.antigen/antigen.zsh
+
+# Load the oh-my-zsh's library.
+antigen use oh-my-zsh
+
+antigen bundle Tarrasch/zsh-bd
+
+# Tell antigen that you're done.
+antigen apply
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
