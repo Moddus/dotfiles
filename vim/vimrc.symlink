@@ -44,7 +44,7 @@ Bundle 'plasticboy/vim-markdown'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'jansenm/vim-cmake'
 Bundle 'tpope/vim-fugitive'
-Bundle 'Floobits/floobits-vim'
+" Bundle 'Floobits/floobits-vim'
 Bundle 'benmills/vimux'
 " "}}}
 
