@@ -18,7 +18,7 @@ alias set_java_7='export JAVA_HOME=/java/jdk1.7'
 alias set_java_6='export JAVA_HOME=/java/jdk1.6'
 
 # brew
-alias brewup='brew update && brew upgrade brew-cask && brew upgrade && brew cleanup && brew cask cleanup'
+#alias brewup='brew update && brew upgrade brew-cask && brew upgrade && brew cleanup && brew cask cleanup'
 
 # ssh
 # alias ssh='sshrc'
