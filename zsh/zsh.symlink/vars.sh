@@ -1,5 +1,7 @@
 # general setting
 
+export BIN="$HOME/bin"
+
 # locale
 export LANG="de_DE.UTF-8"
 export LC_COLLATE="de_DE.UTF-8"

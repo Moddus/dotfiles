@@ -32,7 +32,8 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'Blackrush/vim-gocode'
 " file information plugin
-Bundle 'bling/vim-airline'
+" Bundle 'bling/vim-airline'
+Bundle 'itchyny/lightline.vim'
 " open files
 Bundle 'kien/ctrlp.vim'
 " colorschemes
@@ -46,6 +47,7 @@ Bundle 'jansenm/vim-cmake'
 Bundle 'tpope/vim-fugitive'
 " Bundle 'Floobits/floobits-vim'
 Bundle 'benmills/vimux'
+Bundle 'ryanss/vim-hackernews'
 " "}}}
 
 filetype plugin indent on
@@ -146,7 +148,18 @@ let g:tagbar_type_go = {
 let g:scala_sort_across_groups=1
 
 " Airline
-let g:airline#extensions#tabline#enabled=2 
+" let g:airline#extensions#tabline#enabled=2 
+" set laststatus=2
+
+" lightline
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
 set laststatus=2
 
 " "}}}
