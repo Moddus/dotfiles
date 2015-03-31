@@ -10,7 +10,7 @@ alias copy="tr -d '\n' | pbcopy"
 alias pyhttp='python -m SimpleHTTPServer 8080'
 
 # pip
-alias upip='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U'
+# alias upip='pip freeze --local | grep -v '^\-e' | cut -d = -f 1  | xargs pip install -U'
 
 # java switch
 alias set_java_8='export JAVA_HOME=/java/jdk1.8'
