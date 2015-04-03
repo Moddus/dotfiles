@@ -1,0 +1,85 @@
+" vim-plug plugins "{{{
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'scrooloose/syntastic'
+Plug 'itchyny/lightline.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'scrooloose/syntastic'
+Plug 'altercation/vim-colors-solarized'
+
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'nsf/gocode', {'rtp': 'vim/'}
+Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+
+call plug#end()
+
+" "}}}
+
+" General "{{{
+
+filetype plugin indent on
+filetype plugin on
+syntax on                              " syntax highlighting
+set backspace=2                        " now backspace deletes characters
+set backspace=2                        " now backspace deletes characters
+set hlsearch                           " highlight search results.
+set nocompatible                       " disable vi-incompatible mode
+set enc=utf-8                          " enable utf-8 (vim internal)
+set fileencoding=utf-8                 " enable utf-8 also for files
+set number                             " enable line numbers
+set shiftwidth=4                       " set shift width to 4 chars (in front of a line, correspondent to smarttab)
+set tabstop=4                          " set tab stops to 4 chars (not in front of line)
+set softtabstop=4                      " set tab stops to 4 chars (not in front of line)
+
+" "}}}
+
+" Commands "{{{
+    
+:command WQ wq
+:command Wq wq
+:command W w
+:command Q q
+
+" "}}}
+
+" Theme config " {{{
+
+set background=dark
+colorscheme solarized
+
+" " }}}
+
+" lightline conig " {{{
+let g:lightline = {
+      \ 'colorscheme': 'solarized',
+      \ 'component': {
+      \   'readonly': '%{&readonly?"⭤":""}',
+      \ },
+      \ 'separator': { 'left': '⮀', 'right': '⮂' },
+      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+      \ }
+set laststatus=2
+
+" " }}}
+
+" syntastic config " {{{
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" " }}}
+
+" YouCompleteMe config " {{{
+let g:ycm_key_list_previous_completion=['<Up>']
+let g:ycm_autoclose_preview_window_after_completion = 1
+let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_global_ycm_extra_conf = '~/.config/ycm/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf = 0
+" " }}}
