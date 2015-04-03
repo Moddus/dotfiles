@@ -45,14 +45,14 @@ set softtabstop=4                      " set tab stops to 4 chars (not in front 
 
 " Theme config " {{{
 
-set background=dark
+set background=light
 colorscheme solarized
 
 " " }}}
 
 " lightline conig " {{{
 let g:lightline = {
-      \ 'colorscheme': 'solarized',
+      \ 'colorscheme': 'solarized_light',
       \ 'component': {
       \   'readonly': '%{&readonly?"⭤":""}',
       \ },
