@@ -32,6 +32,7 @@ set number                             " enable line numbers
 set shiftwidth=4                       " set shift width to 4 chars (in front of a line, correspondent to smarttab)
 set tabstop=4                          " set tab stops to 4 chars (not in front of line)
 set softtabstop=4                      " set tab stops to 4 chars (not in front of line)
+set sh=zsh
 
 " "}}}
 
