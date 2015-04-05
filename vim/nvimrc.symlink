@@ -7,6 +7,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'scrooloose/syntastic'
 Plug 'altercation/vim-colors-solarized'
+Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'nsf/gocode', {'rtp': 'vim/'}
@@ -82,4 +83,33 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
+" " }}}
+
+" NERDTree " {{{
+
+map <C-t> :NERDTreeToggle<CR>	" Toggle NERDTree ctrl + t
+
+let NERDTreeShowBookmarks=1
+let NERDTreeShowHidden=1
+
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif		" autoclose NERDTree if last open
+
+" " }}}
+
+" CtrlP config " {{{
+
+" search in:
+" 'a' the directory of the current file, unless it is a subdirectory of the cwd
+" 'r' the nearest ancestor of the current file that contains one of these directories or files: .git .hg .svn .bzr _darcs
+let g:ctrlp_working_path_mode = 'ra'
+
+" If none of the default markers (.git .hg .svn .bzr _darcs) are present in a project
+let g:ctrlp_root_markers = ['pom.xml', 'build.gradle', 'Makefile', 'app.yml', "build.xml", "ivy.xml"]
+
+" Custom file ignore
+let g:ctrlp_custom_ignore = { 
+	\ 'dir': '\v(\.(idea|gitmodules)$)|CMakeFiles',
+	\ 'file' : '\v(.*\.(cmake|pyc))|CMakeCache.txt|CMakeLists.txt.user',
+	\ }
+
 " " }}}
