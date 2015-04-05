@@ -45,6 +45,23 @@ set sh=zsh
 
 " "}}}
 
+" Navigation" {{{
+
+" Use ctrl-[hjkl] to select the active split!
+" <C-h> ist bugged see: https://github.com/neovim/neovim/issues/2048
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+
+" Ctrl+arrow keys to switch between window
+nmap <silent> <C-left>  :wincmd h<CR>
+nmap <silent> <C-right> :wincmd l<CR>
+nmap <silent> <C-down>  :wincmd j<CR>
+nmap <silent> <C-up>    :wincmd k<CR>
+
+" " }}}
+
 " Theme config " {{{
 
 set background=light
