@@ -49,6 +49,7 @@ set sh=zsh
 
 " Use ctrl-[hjkl] to select the active split!
 " <C-h> ist bugged see: https://github.com/neovim/neovim/issues/2048
+nmap <BS> <C-W>h
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <C-j> :wincmd j<CR>
