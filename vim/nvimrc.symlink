@@ -1,6 +1,6 @@
 " vim-plug plugins "{{{
 
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.nvim/plugged')
 
 Plug 'scrooloose/syntastic'
 Plug 'itchyny/lightline.vim'
@@ -10,6 +10,7 @@ Plug 'altercation/vim-colors-solarized'
 Plug 'ctrlpvim/ctrlp.vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+Plug 'Moddus/nerdtree_hacks', { 'on': 'NERDTreeToggle' }
 Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
 
@@ -40,8 +41,9 @@ set sh=zsh
     
 :command WQ wq
 :command Wq wq
-:command W w
-:command Q q
+:command W	w
+:command Q	q
+:command Qa qa
 
 " "}}}
 
@@ -49,7 +51,7 @@ set sh=zsh
 
 " Use ctrl-[hjkl] to select the active split!
 " <C-h> ist bugged see: https://github.com/neovim/neovim/issues/2048
-nmap <BS> <C-W>h
+" nmap <BS> <C-W>h
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <C-j> :wincmd j<CR>
@@ -60,6 +62,17 @@ nmap <silent> <C-left>  :wincmd h<CR>
 nmap <silent> <C-right> :wincmd l<CR>
 nmap <silent> <C-down>  :wincmd j<CR>
 nmap <silent> <C-up>    :wincmd k<CR>
+
+" " }}}
+
+" Terminal " {{{
+
+:tnoremap <Esc> <C-\><C-n>
+ 
+:tnoremap <c-h> <C-\><C-n><C-w>h
+:tnoremap <c-j> <C-\><C-n><C-w>j
+:tnoremap <c-k> <C-\><C-n><C-w>k
+:tnoremap <c-l> <C-\><C-n><C-w>l
 
 " " }}}
 
@@ -132,3 +145,4 @@ let g:ctrlp_custom_ignore = {
 	\ }
 
 " " }}}
+
