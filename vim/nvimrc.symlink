@@ -13,6 +13,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Moddus/nerdtree_hacks', { 'on': 'NERDTreeToggle' }
 Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
+Plug 'fatih/vim-go', {'for' : 'go'}
 
 call plug#end()
 
@@ -146,3 +147,19 @@ let g:ctrlp_custom_ignore = {
 
 " " }}}
 
+" go-vim " {{{
+
+" Activate syntax highligthing
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+
+" gofmt and import on save
+let g:go_fmt_command = "goimports"
+
+" disable quickfix windows
+let g:go_fmt_fail_silently = 0
+
+" " }}}
