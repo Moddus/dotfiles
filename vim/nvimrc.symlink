@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Moddus/nerdtree_hacks', { 'on': 'NERDTreeToggle' }
 Plug 'nsf/gocode', {'rtp': 'vim/'}
 Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer' }
-Plug 'fatih/vim-go', {'for' : 'go'}
+Plug 'fatih/vim-go'
 
 call plug#end()
 
