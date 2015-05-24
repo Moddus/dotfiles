@@ -5,6 +5,7 @@ alias mkdir='mkdir -p'
 alias du='du -sh'
 alias wc="wc -l"
 alias copy="tr -d '\n' | pbcopy"
+alias cat="ccat"
 
 # tools
 alias pyhttp='python -m SimpleHTTPServer 8080'

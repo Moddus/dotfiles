@@ -8,6 +8,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
 Plug 'tpope/vim-surround'
 Plug 'skammer/vim-css-color'
+Plug 'JuliaLang/julia-vim'
 
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 Plug 'Moddus/nerdtree_hacks', { 'on': 'NERDTreeToggle' }
@@ -75,6 +76,16 @@ nmap <silent> <C-up>    :wincmd k<CR>
 :tnoremap <c-j> <C-\><C-n><C-w>j
 :tnoremap <c-k> <C-\><C-n><C-w>k
 :tnoremap <c-l> <C-\><C-n><C-w>l
+
+" " }}}
+
+" Quick Action " {{{
+
+" Use CTRL-S for saving, also in Insert mode
+:nnoremap <C-S>     :<C-U>update<CR>
+:vnoremap <C-S>     :<C-U>update<CR>gv
+:cnoremap <C-S>     <C-C>:update<CR>
+:inoremap <C-S>     <C-O>:update<CR>
 
 " " }}}
 
