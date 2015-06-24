@@ -4,3 +4,6 @@
 [submodule "zsh/prezto.symlink"]
 	path = zsh/prezto.symlink
 	url = git@github.com:Moddus/prezto.git
+[submodule "emacs/emacs.d.symlink"]
+	path = emacs/emacs.d.symlink
+	url = https://github.com/syl20bnr/spacemacs
