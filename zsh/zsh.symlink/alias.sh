@@ -33,3 +33,8 @@ alias unlock_kernel='sudo nvram boot-args="kext-dev-mode=1"'
 
 # neovim
 alias nvimup='brew update && brew reinstall --HEAD neovim'
+
+# pandoc
+
+# markdown + latex to pdf
+mdToPdf() { pandoc $1 --template=/Users/markus.boese/.pandoc/default.latex --latex-engine=xelatex -o $2.pdf; }
