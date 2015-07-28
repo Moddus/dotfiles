@@ -18,6 +18,8 @@ Plug 'fatih/vim-go'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': 'yes \| ./install' }
 
 Plug 'floobits/floobits-neovim'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 
 call plug#end()
 
@@ -138,6 +140,7 @@ let g:ycm_confirm_extra_conf = 0
 let g:ycm_collect_identifiers_from_tags_files = 1 
 " " }}}
 
+
 " NERDTree " {{{
 
 map <C-t> :NERDTreeToggle<CR>	" Toggle NERDTree ctrl + t
@@ -182,7 +185,7 @@ let g:go_fmt_command = "goimports"
 " " }}}
 
 " FZF " {{{
-set rtp+=~/.fzf
+" set rtp+=~/.fzf
 
 nnoremap <c-p> :FZF<cr>
 
@@ -204,3 +207,11 @@ aug END
 " :g/^$/d
 
 " " }}}
+
+" UltiSnips " {{{
+
+let g:UltiSnipsExpandTrigger="<c-j>"
+let g:UltiSnipsJumpForwardTrigger="<c-j>"
+let g:UltiSnipsJumpBackwardTrigger="<c-k>"
+
+" "}}}
