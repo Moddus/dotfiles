@@ -41,6 +41,7 @@ set shiftwidth=4                       " set shift width to 4 chars (in front of
 set tabstop=4                          " set tab stops to 4 chars (not in front of line)
 set softtabstop=4                      " set tab stops to 4 chars (not in front of line)
 set sh=zsh
+set cino=(0							   " indent as i love it :)
 
 " "}}}
 
