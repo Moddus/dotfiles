@@ -38,3 +38,9 @@ alias nvimup='brew update && brew reinstall --HEAD neovim'
 
 # markdown + latex to pdf
 mdToPdf() { pandoc $1 --template=/Users/markus.boese/.pandoc/default.latex --latex-engine=xelatex -o $2.pdf; }
+
+# find
+mfind() { 
+	find . -name "$1" 
+}
+alias find='mfind'
