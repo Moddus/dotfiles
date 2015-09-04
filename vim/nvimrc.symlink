@@ -24,6 +24,7 @@ Plug 'honza/vim-snippets'
 Plug 'Yggdroot/indentLine'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'Raimondi/delimitMate'
+Plug 'ekalinin/Dockerfile.vim'
 
 call plug#end()
 
@@ -52,7 +53,7 @@ set cino=(0							   " indent as i love it :)
 " "}}}
 
 " Commands "{{{
-    
+
 :command WQ wq
 :command Wq wq
 :command W	w
@@ -82,7 +83,7 @@ nmap <silent> <C-up>    :wincmd k<CR>
 " Terminal " {{{
 
 :tnoremap <Esc> <C-\><C-n>
- 
+
 :tnoremap <c-h> <C-\><C-n><C-w>h
 :tnoremap <c-j> <C-\><C-n><C-w>j
 :tnoremap <c-k> <C-\><C-n><C-w>k
@@ -144,7 +145,7 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_autoclose_preview_window_after_insertion = 1
 let g:ycm_global_ycm_extra_conf = '~/.config/ycm/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf = 0
-let g:ycm_collect_identifiers_from_tags_files = 1 
+let g:ycm_collect_identifiers_from_tags_files = 1
 
 map <C-g> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
@@ -173,7 +174,7 @@ let g:ctrlp_working_path_mode = 'ra'
 let g:ctrlp_root_markers = ['pom.xml', 'build.gradle', 'Makefile', 'app.yml', "build.xml", "ivy.xml"]
 
 " Custom file ignore
-let g:ctrlp_custom_ignore = { 
+let g:ctrlp_custom_ignore = {
 	\ 'dir': '\v(\.(idea|gitmodules)$)|CMakeFiles',
 	\ 'file' : '\v(.*\.(cmake|pyc|a|amm))|CMakeCache.txt|CMakeLists.txt.user',
 	\ }
