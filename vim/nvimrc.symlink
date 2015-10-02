@@ -36,8 +36,8 @@ let delimitMate_expand_cr = 1
 
 filetype plugin indent on
 filetype plugin on
+set expandtab
 syntax on                              " syntax highlighting
-set backspace=2                        " now backspace deletes characters
 set backspace=2                        " now backspace deletes characters
 set hlsearch                           " highlight search results.
 set nocompatible                       " disable vi-incompatible mode
