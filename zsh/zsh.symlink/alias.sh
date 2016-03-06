@@ -2,7 +2,7 @@
 
 alias l='ls -laFG'
 alias mkdir='mkdir -p'
-alias du='du -sh'
+#alias du='du -sh'
 alias wc="wc -l"
 alias copy="tr -d '\n' | pbcopy"
 alias fcopy="pbcopy"
@@ -44,3 +44,11 @@ mfind() {
 	find . -name "$1" 
 }
 alias find='mfind'
+
+# git reset fork
+git_fork_reset() {
+	git fetch upstream
+	git checkout master
+	git reset --hard upstream/master  
+	git push origin master --force 
+}

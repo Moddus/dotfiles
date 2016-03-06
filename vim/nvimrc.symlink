@@ -1,8 +1,10 @@
+set runtimepath+=~/.nvim/autoload
 " vim-plug plugins "{{{
 
 call plug#begin('~/.nvim/plugged')
 
-Plug 'scrooloose/syntastic'
+"Plug 'scrooloose/syntastic'
+Plug 'benekastah/neomake'
 Plug 'itchyny/lightline.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'altercation/vim-colors-solarized'
@@ -110,13 +112,13 @@ colorscheme solarized
 
 " lightline conig " {{{
 let g:lightline = {
-      \ 'colorscheme': 'solarized_light',
-      \ 'component': {
-      \   'readonly': '%{&readonly?"⭤":""}',
-      \ },
-      \ 'separator': { 'left': '⮀', 'right': '⮂' },
-      \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
-      \ }
+  \ 'colorscheme': 'solarized_light',
+  \ 'component': {
+  \   'readonly': '%{&readonly?"⭤":""}',
+  \ },
+  \ 'separator': { 'left': '⮀', 'right': '⮂' },
+  \ 'subseparator': { 'left': '⮁', 'right': '⮃' }
+  \ }
 set laststatus=2
 
 " " }}}
@@ -133,9 +135,9 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_mode_map = {
-        \ "mode": "active",
-        \ "active_filetypes": [],
-        \ "passive_filetypes": [""] }
+    \ "mode": "active",
+    \ "active_filetypes": [],
+    \ "passive_filetypes": [""] }
 
 " " }}}
 
@@ -175,9 +177,9 @@ let g:ctrlp_root_markers = ['pom.xml', 'build.gradle', 'Makefile', 'app.yml', "b
 
 " Custom file ignore
 let g:ctrlp_custom_ignore = {
-	\ 'dir': '\v(\.(idea|gitmodules)$)|CMakeFiles',
-	\ 'file' : '\v(.*\.(cmake|pyc|a|amm))|CMakeCache.txt|CMakeLists.txt.user',
-	\ }
+\ 'dir': '\v(\.(idea|gitmodules)$)|CMakeFiles',
+\ 'file' : '\v(.*\.(cmake|pyc|a|amm))|CMakeCache.txt|CMakeLists.txt.user',
+\ }
 
 " " }}}
 
@@ -189,9 +191,18 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
+let g:go_fmt_fail_silently = 1
 
 " gofmt and import on save
 let g:go_fmt_command = "goimports"
+au FileType go nmap <Leader>s <Plug>(go-implements)
+au FileType go nmap <Leader>i <Plug>(go-info)
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <Leader>gb <Plug>(go-doc-browser)
+au FileType go nmap <Leader>ds <Plug>(go-def-split)
+au FileType go nmap <Leader>dv <Plug>(go-def-vertical)
+au FileType go nmap <Leader>dt <Plug>(go-def-tab)
 
 " " }}}
 
@@ -206,8 +217,8 @@ nnoremap <c-p> :FZF<cr>
 
 " auto close quickfix windows
 aug QFClose
-  au!
-  au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
+au!
+au WinEnter * if winnr('$') == 1 && getbufvar(winbufnr(winnr()), "&buftype") == "quickfix"|q|endif
 aug END
 
 " " }}}
@@ -230,4 +241,4 @@ let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 " delimitMate " {{{
 "
 
-" " }}}
+" " }}jjk}
